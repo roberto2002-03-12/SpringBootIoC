@@ -1,8 +1,10 @@
 package net.rob.projects.SpringBootIoC.repository;
 
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Repository;
 
 @Repository("productRepositoryB")
+@Primary
 public class ProductRepositoryB implements IProductRepository {
   public ProductRepositoryB() {
     System.out.println("ProductRepositoryB: constructor");

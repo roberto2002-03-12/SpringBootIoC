@@ -10,8 +10,6 @@ import net.rob.projects.SpringBootIoC.service.ProductService;
 
 @SpringBootApplication
 public class SpringBootIoCApplication implements CommandLineRunner {
-
-	// Evitas crear instancia con al momento de crear la clase
 	@Autowired
 	private ProductService productService;
 
@@ -26,7 +24,7 @@ public class SpringBootIoCApplication implements CommandLineRunner {
 
 	// Ejecuta y guarda esta clase o metodo al ejecutar el proyecto
 	@Bean
-	public CommandLineRunner comandoGenerico() {
+	CommandLineRunner comandoGenerico() {
 		return args -> {
 			System.out.println("== productRepositoryA == ");
 			productService.save("Control remoto");
