@@ -1,5 +1,8 @@
 package net.rob.projects.SpringBootIoC.repository;
 
+import org.springframework.stereotype.Repository;
+
+@Repository("productRepositoryA")
 public class ProductRepositoryA implements IProductRepository {
 
   public ProductRepositoryA() {
